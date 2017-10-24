@@ -1,6 +1,6 @@
 #include "toppings.h"
 
-bool Toppings::stock(){
+bool Toppings::is_stock(){
   if(stock == 0){
     cout << name << " sold out\n";
     return false;

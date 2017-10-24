@@ -1,6 +1,6 @@
-#include "containers"
+#include "containers.h"
 
-bool Containers::stock(){
+bool Containers::is_stock(){
   if(stock == 0){
     cout << name << " sold out\n";
     return false;

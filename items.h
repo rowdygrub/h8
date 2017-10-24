@@ -11,9 +11,9 @@ class Items {
     void add_containers();
     void add_toppings();
 
-    int number_of_flavors;
-    int number_of_containers;
-    int number_of_toppings;
+    int number_of_flavors();
+    int number_of_containers();
+    int number_of_toppings();
   private:
     vector <Flavors> flavors;
     vector <Containers> containers;

@@ -22,7 +22,7 @@ void Items::add_flavors(){
   cin >> retail_price;
   cout << "Enter stock amount:";
   cin >> stock;
-  Flavors f{name,description,wholesale_cost,retail_price,stock}
+  Flavors f{name,description,wholesale_cost,retail_price,stock};
   flavors.push_back(f);
 }
 
@@ -43,7 +43,7 @@ void Items::add_toppings(){
   cout << "Enter stock amount:";
   cin >> stock;
 
-  Toppings t{name,description,wholesale_cost,retail_price,stock}
+  Toppings t{name,description,wholesale_cost,retail_price,stock};
   toppings.push_back(t);
 }
 
@@ -64,6 +64,6 @@ void::Items::add_containers(){
   cout << "Enter stock amount:";
   cin >> stock;
 
-  Containers c{name,description,wholesale_cost, retail_price,stock, maximum}
+  Containers c{name,description,wholesale_cost, retail_price,stock, maximum};
   containers.push_back(c);
 }

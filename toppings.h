@@ -1,5 +1,5 @@
-#ifndef toppings.h
-#define toppings.h
+#ifndef TOPPINGS_H_
+#define TOPPINGS_H_
 #include <iostream>
 #include <string>
 
@@ -11,7 +11,7 @@ class Toppings{
       : name{name}, description{description}, wholesale_cost{wholesale_cost}, retail_price{retail_price}, stock{stock} {}
 
     string to_string();//list the contents
-    bool stock();//decrement each time toppings is used and if(stock == 0) then sold out
+    bool is_stock();//decrement each time toppings is used and if(stock == 0) then sold out
   private:
     string name;
     string description;
