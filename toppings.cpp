@@ -1,6 +1,6 @@
-#include "flavors.h"
+#include "toppings.h"
 
-bool Flavors::stock(){
+bool Toppings::stock(){
   if(stock == 0){
     cout << name << " sold out\n";
     return false;

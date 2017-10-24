@@ -13,7 +13,7 @@ class Containers{
 
     string to_string(); //list the contents
     int get_maximum();//get the max to compare to number of scoops customer wants
-    void stock();//decrement each time containers is used and if(stock == 0) then sold out
+    bool stock();//decrement each time containers is used and if(stock == 0) then sold out
   private:
     string name;
     string description;

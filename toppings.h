@@ -1,17 +1,17 @@
-#ifndef flavors.h
-#define flavors.h
+#ifndef toppings.h
+#define toppings.h
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-class Flavors{
+class Toppings{
   public:
-    Flavors(string name, string description, double wholesale_cost, double retail_price, int stock)
+    Toppings(string name, string description, double wholesale_cost, double retail_price, int stock)
       : name{name}, description{description}, wholesale_cost{wholesale_cost}, retail_price{retail_price}, stock{stock} {}
 
     string to_string();//list the contents
-    bool stock();//decrement each time flavors is used and if(stock == 0) then sold out
+    bool stock();//decrement each time toppings is used and if(stock == 0) then sold out
   private:
     string name;
     string description;
