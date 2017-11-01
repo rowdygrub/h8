@@ -76,6 +76,7 @@ void Controller::create_serving_dialog(){
   int container = c_container.get_active_row_number();
   int flavor[items.number_of_containers()];//to store server dropdown selection
   vector <int> toppings; //allows as much toppings as the customer wants
+  vector <int> topping_amount; //lined up with toppings vector to show amount for each topping_amount
 
   //second dialogs after getting container size
   if(result == 1){
@@ -138,7 +139,7 @@ void Controller::create_serving_dialog(){
 
       /*
 
-      TODO ADD ANOTHER DROPDOWN MENU FOR AMOUNT OF TOPPINGS
+      TODO ADD ANOTHER DROPDOWN MENU FOR AMOUNT OF TOPPINGS (LIGHT NORMAL EXTRA HEAVY) (0 1 2 3)
       COMBOBOXTEXT HERE
 
       */
@@ -162,8 +163,9 @@ void Controller::create_serving_dialog(){
       delete dialog3;
   }
 
-  //store the serving into a class SERVING
-  //if(result == 2)
 
+  //if(result == 2)
+  //store the serving into a class SERVING s{container,flavor[], topping, topping_amount}
+  //vector <Serving> order.push_back(s) 
 
 }
