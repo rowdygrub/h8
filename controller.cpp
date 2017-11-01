@@ -136,6 +136,13 @@ void Controller::create_serving_dialog(){
       b_topping.pack_start(c_topping, Gtk::PACK_SHRINK);
       dialog3->get_vbox()->pack_start(b_topping, Gtk::PACK_SHRINK);
 
+      /*
+
+      TODO ADD ANOTHER DROPDOWN MENU FOR AMOUNT OF TOPPINGS
+      COMBOBOXTEXT HERE
+
+      */
+
       //buttons
       dialog3->add_button("Cancel",0);
       dialog3->add_button("Next",1);
