@@ -37,9 +37,9 @@ Main_window::Main_window(){
   menuitem_add->set_submenu(*add_menu);
 
   //append items to add menu
-  Gtk::MenuItem *items = Gtk::manage(new Gtk::MenuItem("_Items",true));
-  items->signal_activate().connect(sigc::mem_fun(*this, &Main_window::on_add_items_click));
-  add_menu->append(*items);
+  Gtk::MenuItem *m_items = Gtk::manage(new Gtk::MenuItem("_Items",true));
+  m_items->signal_activate().connect(sigc::mem_fun(*this, &Main_window::on_add_items_click));
+  add_menu->append(*m_items);
 
   /*TODO
     append CUSTOMER

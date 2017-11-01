@@ -1,6 +1,6 @@
 #ifndef MAIN_WINDOW_H
 #define MAIN_WINDOW_H
-
+#include <gtkmm.h>
 #include "controller.h"
 
 class Main_window : public Gtk::Window{

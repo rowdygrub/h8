@@ -1,6 +1,6 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
-
+#include <gtkmm.h>
 #include "items.h"
 
 class Controller{
