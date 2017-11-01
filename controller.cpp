@@ -74,7 +74,7 @@ void Controller::create_serving_dialog(){
   while(Gtk::Main::events_pending()) Gtk::Main::iteration();
 
   int container = c_container.get_active_row_number();
-  int flavor[items.number_of_containers()];//to store server dropdown selection
+  vector <int> flavor;//to store server dropdown selection
   vector <int> toppings; //allows as much toppings as the customer wants
   vector <int> topping_amount; //lined up with toppings vector to show amount for each topping_amount
 
@@ -87,7 +87,7 @@ void Controller::create_serving_dialog(){
       Gtk::HBox b_flavor;
 
       int f = i + 1;
-      Gtk::Label l_flavor{"Select Flavor " + f};
+      Gtk::Label l_flavor{"Select Flavor"};
       l_flavor.set_width_chars(16);
       b_flavor.pack_start(l_flavor, Gtk::PACK_SHRINK);
 
@@ -108,7 +108,7 @@ void Controller::create_serving_dialog(){
       while(Gtk::Main::events_pending()) Gtk::Main::iteration();
 
       if(result == 1)
-        flavor[i] = c_flavor.get_active_row_number();
+        flavor.push_back(c_flavor.get_active_row_number());
       else{
         delete dialog2;
         break;
@@ -164,8 +164,10 @@ void Controller::create_serving_dialog(){
   }
 
 
-  //if(result == 2)
-  //store the serving into a class SERVING s{container,flavor[], topping, topping_amount}
-  //vector <Serving> order.push_back(s) 
+  if(result == 2){
+    Serving s{container,toppings,flavor};//add topping_amount
+    order.push_back(s);
+  }
 
+  delete dialog;
 }

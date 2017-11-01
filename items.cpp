@@ -129,7 +129,7 @@ void Items::add_toppings(){
 
 
   Gtk::Dialog *dialog = new Gtk:: Dialog();
-  dialog->set_title("Add Flavor");
+  dialog->set_title("Add Toppings");
 
   //NAME
   Gtk::HBox b_name;
@@ -226,7 +226,7 @@ void::Items::add_containers(){
 
 
   Gtk::Dialog *dialog = new Gtk:: Dialog();
-  dialog->set_title("Add Flavor");
+  dialog->set_title("Add Containers");
 
   //NAME
   Gtk::HBox b_name;
