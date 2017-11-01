@@ -8,3 +8,11 @@ bool Containers::is_stock(){
   stock = stock - 1;
   return true;
 }
+
+int Containers::get_maximum(){
+  return maximum;
+}
+
+string Containers::to_string(){
+  return name;
+}

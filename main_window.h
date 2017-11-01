@@ -10,6 +10,7 @@ class Main_window : public Gtk::Window{
   protected:
     void on_quit_click();
     void on_add_items_click();
+    void on_create_serving_click();
   private:
     Controller controller;
 };

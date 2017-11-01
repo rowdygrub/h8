@@ -12,6 +12,12 @@ class Items {
     void add_containers();
     void add_toppings();
 
+    string containers_to_string(int index);
+    string flavors_to_string(int index);
+    string toppings_to_string(int index);
+    
+    int get_max_containers(int index);
+
     int number_of_flavors();
     int number_of_containers();
     int number_of_toppings();

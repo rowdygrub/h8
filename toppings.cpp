@@ -8,3 +8,5 @@ bool Toppings::is_stock(){
   stock = stock - 1;
   return true;
 }
+
+string Toppings::to_string(){return name;}

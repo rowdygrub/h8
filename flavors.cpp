@@ -8,3 +8,5 @@ bool Flavors::is_stock(){
   stock = stock - 1;
   return true;
 }
+
+string Flavors::to_string(){return name;}

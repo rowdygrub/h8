@@ -45,9 +45,22 @@ Main_window::Main_window(){
     append CUSTOMER
     append SERVER
   */
+
+  //create serving dropdown(Make a order button later)(Gtk::Toolbar)
+  Gtk::MenuItem *menuitem_create = Gtk::manage(new Gtk::MenuItem("_Create",true));
+  menubar->append(*menuitem_create);
+  Gtk::Menu *add_create_menu = Gtk::manage(new Gtk::Menu());
+  menuitem_create->set_submenu(*add_create_menu);
+
+  //append create to serving menu
+  Gtk::MenuItem *serving = Gtk::manage(new Gtk::MenuItem("_Serving",true));
+  serving->signal_activate().connect(sigc::mem_fun(*this,&Main_window::on_create_serving_click));
+  add_create_menu->append(*serving);
+
   vbox->show_all();
   //TODO EDIT REPORT ABOUT dropdown menu
 }
 
+void Main_window::on_create_serving_click(){controller.create_serving_dialog();}
 void Main_window::on_quit_click(){hide();}
 void Main_window::on_add_items_click(){controller.add_dialog();}

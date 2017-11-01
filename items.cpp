@@ -7,6 +7,25 @@ int Items::number_of_toppings(){return toppings.size();}
 
 int Items::number_of_containers(){return containers.size();}
 
+int Items::get_max_containers(int index){
+    return containers[index].get_maximum();
+}
+
+string Items::containers_to_string(int index){
+  string s = containers[index].to_string();
+  return s;
+}
+
+string Items::flavors_to_string(int index){
+  string s = flavors[index].to_string();
+  return s;
+}
+
+string Items::toppings_to_string(int index){
+  string s = toppings[index].to_string();
+  return s;
+}
+
 void Items::add_flavors(){
   string name, description, wholesale, retail, stock_string;
   double wholesale_cost, retail_price;
