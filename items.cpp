@@ -22,6 +22,8 @@ void Items::add_flavors(){
   cin >> retail_price;
   cout << "Enter stock amount:";
   cin >> stock;
+
+  
   Flavors f{name,description,wholesale_cost,retail_price,stock};
   flavors.push_back(f);
 }

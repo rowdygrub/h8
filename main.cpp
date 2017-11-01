@@ -1,7 +1,12 @@
-#include "items.h"
+#include <gtkmm.h>
+#include "main_window.h"
+
 void menu();
 void execute_cmd(int n);
 
+//TODO:MAKE A MAIN CLASS WITH PRIVATE:ITEMS item
+
+//controller
 void execute_cmd(int n){
   Items i;
   if(n == 1)
@@ -23,6 +28,8 @@ void menu(){
 }
 
 
-int main(){
+int main(int argc, char *argv{}){
+  Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc,argv,"edu.uta.cse1325.example");
+
   menu();
 }
